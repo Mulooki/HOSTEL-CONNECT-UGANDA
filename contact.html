@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- contact.html - the CONTACT page (has a form) -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- This line makes the page fit properly on a phone screen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | HostelConnect Uganda</title>
+  <!-- Connects this page to our CSS file -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER: logo and menu (the same on every page) -->
+  <header>
+    <div class="container header-row">
+      <a href="index.html"><img class="logo" src="images/logo.png" alt="HostelConnect Uganda logo"></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="hostels.html">Hostels</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-title">
+      <div class="container">
+        <h1>Contact us</h1>
+        <p>Suggest a hostel, report old information or list your own hostel.</p>
+      </div>
+    </section>
+
+    <section class="container text-page">
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:hello@hostelconnect.example">hello@hostelconnect.example</a></p>
+      <p><strong>Hostel owners:</strong> include the hostel name, area, room types, price per semester, facilities and a caretaker phone number.</p>
+      <p><strong>Students:</strong> tell us the hostel name and what has changed, such as a new price or phone number.</p>
+
+      <!-- FORM: the fields a visitor fills in -->
+      <h2>Send a message</h2>
+      <form action="mailto:hello@hostelconnect.example" method="post" enctype="text/plain">
+
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic">What is this about?</label>
+        <select id="topic" name="topic">
+          <option>Suggest a hostel</option>
+          <option>Report old information</option>
+          <option>List my hostel</option>
+          <option>Something else</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (the same on every page) -->
+  <footer>
+    <div class="container">
+      <p>Email: <a href="mailto:hello@hostelconnect.example">hello@hostelconnect.example</a></p>
+      <p>Information is for guidance only and may change. Always confirm with the hostel.</p>
+      <p>&copy; 2026 HostelConnect Uganda</p>
+    </div>
+  </footer>
+
+</body>
+</html>
