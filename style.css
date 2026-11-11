@@ -1,0 +1,292 @@
+/* ==========================================================
+   HostelConnect Uganda - style.css
+   One CSS file used by every page.
+   Idea: HTML = the content, CSS = how it looks.
+   ========================================================== */
+
+
+/* ---------- 1. GENERAL SETTINGS (apply to the whole page) ---------- */
+
+/* Makes width and height easier to control (padding counts inside the box) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;                      /* remove the default space around the page */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;               /* space between lines of text */
+  color: #001c5a;                 /* dark blue text */
+  background-color: #f5f7fc;      /* very light blue background */
+}
+
+img {
+  max-width: 100%;                /* images never get wider than their box */
+}
+
+a {
+  color: #0a559e;
+}
+
+/* .container keeps content in the middle of the screen */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;                 /* "auto" on left and right = centered */
+  padding: 0 20px;
+}
+
+
+/* ---------- 2. HEADER AND MENU ---------- */
+
+header {
+  background-color: white;
+  border-bottom: 4px solid #ffb400;   /* gold line under the header */
+  padding: 10px 0;
+}
+
+/* Flexbox puts the logo and the menu side by side */
+.header-row {
+  display: flex;
+  justify-content: space-between;     /* logo on the left, menu on the right */
+  align-items: center;
+  flex-wrap: wrap;                    /* on a small screen, move to the next line */
+}
+
+.logo {
+  height: 50px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;              /* remove the underline */
+  color: #001c5a;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffb400;                     /* changes colour when the mouse is over it */
+}
+
+
+/* ---------- 3. HEADINGS AND BUTTONS ---------- */
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #ffb400;          /* gold */
+  color: #001c5a;
+  padding: 10px 20px;
+  border-radius: 8px;                 /* rounded corners */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #ffc94d;          /* lighter gold on hover */
+}
+
+
+/* ---------- 4. HOME PAGE: HERO (big top section) ---------- */
+
+.hero {
+  background-color: #001c5a;          /* dark blue band */
+  color: white;
+  padding: 40px 0;
+}
+
+.hero-row {
+  display: flex;
+  gap: 30px;                          /* space between text and picture */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-text,
+.hero-image {
+  flex: 1 1 300px;                    /* both share the row equally, minimum 300px */
+}
+
+.hero-image img {
+  border: 4px solid #ffb400;
+  border-radius: 10px;
+}
+
+
+/* ---------- 5. PAGE TITLE BAR (Hostels, About, Contact) ---------- */
+
+.page-title {
+  background-color: #e8edf8;
+  padding: 20px 0;
+}
+
+
+/* ---------- 6. ROWS OF BOXES AND CARDS ---------- */
+
+/* .row lines boxes up side by side and wraps them onto new lines */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* A simple white box (used in "How it works") */
+.box {
+  flex: 1 1 250px;                    /* grow to share space, minimum 250px */
+  background-color: white;
+  border: 1px solid #d5dcec;
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+/* A hostel card */
+.card {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background-color: white;
+  border: 1px solid #d5dcec;
+  border-bottom: 5px solid #ffb400;   /* gold line at the bottom */
+  border-radius: 10px;
+  overflow: hidden;                   /* keeps the picture inside the rounded corners */
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;                  /* crop the picture instead of stretching it */
+  display: block;
+}
+
+.card-text {
+  padding: 15px;
+}
+
+.card h3 {
+  margin: 0 0 5px 0;
+}
+
+.card h3 a {
+  color: #001c5a;
+  text-decoration: none;
+}
+
+.area {
+  color: #3a4a73;                     /* softer blue for the location */
+  margin: 0 0 10px 0;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price small {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+
+/* ---------- 7. TEXT PAGES (About, Contact, hostel details) ---------- */
+
+.text-page {
+  max-width: 800px;                   /* narrower, easier to read */
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.wide-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border: 4px solid #ffb400;
+  border-radius: 10px;
+}
+
+.contact-box {
+  background-color: #fff1bf;          /* light yellow */
+  border: 1px solid #e8cf7e;
+  border-radius: 10px;
+  padding: 5px 20px 15px 20px;
+  margin-top: 30px;
+}
+
+.contact-box a {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+/* ---------- 8. TABLES ---------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;          /* join the cell borders into single lines */
+  background-color: white;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #d5dcec;
+}
+
+th {
+  background-color: #e8edf8;
+}
+
+
+/* ---------- 9. CONTACT FORM ---------- */
+
+form {
+  background-color: white;
+  border: 1px solid #d5dcec;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+label {
+  display: block;                     /* each label on its own line */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #8a9bac;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 15px;
+  background-color: #ffb400;
+  color: #001c5a;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;                    /* hand-shaped mouse pointer */
+}
+
+
+/* ---------- 10. FOOTER ---------- */
+
+footer {
+  background-color: #001c5a;
+  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+}
