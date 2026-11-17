@@ -42,7 +42,7 @@ header {
   background-color: white;
   border-bottom: 4px solid #ffb400;   /* gold line under the header */
   padding: 10px 0;
-   position: sticky;                   /* sticky: the header stays visible while you scroll */  
+  position: sticky;                   /* sticky: the header stays visible while you scroll */  
   top: 0;                             /* it sticks to the very top of the screen */            
   z-index: 100;                       /* keeps it in front of the page content */             
 }
